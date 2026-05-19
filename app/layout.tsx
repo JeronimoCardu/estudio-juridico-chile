@@ -1,14 +1,6 @@
 import type { Metadata } from "next";
-import { EB_Garamond, Hanken_Grotesk } from "next/font/google";
+import { geistSans } from "@/lib/fonts";
 import "./globals.css";
-
-export const geistSans = Hanken_Grotesk({
-  subsets: ["latin"],
-});
-
-export const geistMono = EB_Garamond({
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Estudio Jurídico Chile",
@@ -22,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={` h-full antialiased`}>
+    <html lang="es" className="h-full antialiased">
       <body className={`min-h-full flex flex-col ${geistSans.className}`}>
         {children}
       </body>

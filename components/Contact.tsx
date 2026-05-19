@@ -1,4 +1,4 @@
-import { geistMono, geistSans } from "@/app/layout";
+import { geistMono, geistSans } from "@/lib/fonts";
 import { MdOutlineLocationOn, MdOutlineEmail, MdOutlinePhone } from "react-icons/md";
 
 const contactInfo = [
@@ -21,11 +21,11 @@ const contactInfo = [
 
 export default function Contact() {
   return (
-    <section className="bg-tertiary py-24 px-30">
-      <div className="flex gap-16 items-start">
+    <section className="bg-tertiary py-16 lg:py-24 px-6 lg:px-30">
+      <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
         {/* Left */}
-        <div className="w-2/5 flex flex-col gap-10 pt-4">
-          <h2 className={`text-5xl text-primary ${geistMono.className}`}>
+        <div className="w-full lg:w-2/5 flex flex-col gap-8 lg:pt-4">
+          <h2 className={`text-3xl sm:text-4xl lg:text-5xl text-primary ${geistMono.className}`}>
             Hablemos de su Caso
           </h2>
           <p className={`text-secondary text-sm leading-relaxed ${geistSans.className}`}>
@@ -50,8 +50,8 @@ export default function Contact() {
         </div>
 
         {/* Right — Form card */}
-        <div className="flex-1 bg-white rounded-xl p-10 shadow-sm flex flex-col gap-8">
-          <div className="grid grid-cols-2 gap-8">
+        <div className="w-full lg:flex-1 bg-white rounded-xl p-6 sm:p-10 shadow-sm flex flex-col gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
             <div className="flex flex-col gap-1">
               <label className={`text-primary text-sm font-semibold ${geistSans.className}`}>
                 Nombre Completo

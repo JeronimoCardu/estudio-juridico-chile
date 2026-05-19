@@ -1,4 +1,4 @@
-import { geistMono, geistSans } from "@/app/layout";
+import { geistMono, geistSans } from "@/lib/fonts";
 import { GiCrucifix } from "react-icons/gi";
 import { RiInstagramLine, RiLinkedinLine } from "react-icons/ri";
 
@@ -8,9 +8,9 @@ const legalLinks = ["Aviso Legal", "Política de Privacidad", "Términos y Condi
 export default function Footer() {
   return (
     <footer className="bg-primary">
-      <div className="px-30 pt-20 pb-12 grid grid-cols-4 gap-12">
+      <div className="px-6 lg:px-30 pt-16 pb-10 grid grid-cols-2 md:grid-cols-4 gap-10">
         {/* Logo + tagline */}
-        <div className="flex flex-col gap-6">
+        <div className="col-span-2 md:col-span-1 flex flex-col gap-6">
           <div className="flex items-center gap-2">
             <GiCrucifix size={20} className="text-white" />
             <div>
@@ -28,7 +28,7 @@ export default function Footer() {
         </div>
 
         {/* Navegación */}
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-5">
           <h4 className={`text-secondary text-base font-semibold ${geistMono.className}`}>
             Navegación
           </h4>
@@ -44,7 +44,7 @@ export default function Footer() {
         </div>
 
         {/* Legal */}
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-5">
           <h4 className={`text-secondary text-base font-semibold ${geistMono.className}`}>
             Legal
           </h4>
@@ -60,7 +60,7 @@ export default function Footer() {
         </div>
 
         {/* Horario */}
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-5">
           <h4 className={`text-secondary text-base font-semibold ${geistMono.className}`}>
             Horario
           </h4>
@@ -86,7 +86,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-white/10 px-30 py-6">
+      <div className="border-t border-white/10 px-6 lg:px-30 py-6">
         <p className={`text-center text-white/40 text-xs ${geistSans.className}`}>
           © 2024 Valdés &amp; Co. Estudio Jurídico. Santiago, Chile. Todos los derechos reservados.
         </p>
